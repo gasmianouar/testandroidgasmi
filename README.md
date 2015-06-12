@@ -66,6 +66,7 @@ Feel free to try the apk sample which show you the application. You can find it 
 - Develop the list adapter in ListApplicationFragment
 - Load the data in ListApplicationFragment
 - Initialize the AboutFragment with the correct view and data
-- Develop the layout for the DetailActivity
+- Develop the layout for the DetailActivity according this screenshot
+![alt text](https://raw.githubusercontent.com/Appturbo/exercice-android/master/DetailActivity.png "DetailActivity Screenshot")
 - Load the DetailActivity with the correct data
 - Translate the @string/my_description in english and another language(french)
