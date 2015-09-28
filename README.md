@@ -56,7 +56,7 @@ This project is linked to only one endpoint which returns the list of applicatio
     ]
 ```
 
-The url of this endpoint is : http://ligol.free.fr/Android/data.json
+The url of this endpoint is : http://mobile-team.appturbo.net/exerciceAndroid.json
 
 Feel free to try the apk sample which will show you the application. You can find it at the root of the git repository.
 
