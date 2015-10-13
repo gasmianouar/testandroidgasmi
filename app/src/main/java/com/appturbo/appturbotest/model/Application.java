@@ -16,6 +16,33 @@ public class Application implements Parcelable {
     private String logo;
     private String screenshot;
 
+    public Application(String name , String description , String logo , String screenshot) {
+        super();
+        this.name = name ;
+        this.description = description ;
+        this.logo = logo ;
+        this.screenshot = screenshot ;
+    }
+
+    protected Application(Parcel in) {
+        name = in.readString();
+        description = in.readString();
+        logo = in.readString();
+        screenshot = in.readString();
+    }
+
+    public static final Creator<Application> CREATOR = new Creator<Application>() {
+        @Override
+        public Application createFromParcel(Parcel in) {
+            return new Application(in);
+        }
+
+        @Override
+        public Application[] newArray(int size) {
+            return new Application[size];
+        }
+    };
+
     public String getName() {
         return name;
     }
@@ -46,5 +73,18 @@ public class Application implements Parcelable {
 
     public void setScreenshot(String screenshot) {
         this.screenshot = screenshot;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(description);
+        dest.writeString(logo);
+        dest.writeString(screenshot);
     }
 }
